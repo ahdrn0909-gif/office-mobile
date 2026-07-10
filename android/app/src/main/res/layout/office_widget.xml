@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widget_root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/widget_bg"
     android:padding="14dp">
@@ -100,24 +100,62 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- 해야 할 일 -->
-    <TextView
-        android:id="@+id/widget_todo"
-        android:layout_width="wrap_content"
+    <!-- 할 일 / 안읽은 쪽지 2칸 -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="해야 할 일"
-        android:textColor="#E8E8EA"
-        android:textSize="12sp"
-        android:layout_marginTop="10dp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp"
+        android:weightSum="2">
 
-    <!-- 안 읽은 쪽지 -->
-    <TextView
-        android:id="@+id/widget_msg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="안 읽은 쪽지"
-        android:textColor="#E8E8EA"
-        android:textSize="12sp"
-        android:layout_marginTop="4dp" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/widget_chip"
+            android:padding="6dp">
+            <TextView
+                android:id="@+id/widget_todo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#E8E8EA"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="할 일"
+                android:textColor="#9A9AA0"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/widget_chip"
+            android:padding="6dp">
+            <TextView
+                android:id="@+id/widget_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#E8E8EA"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안읽은 쪽지"
+                android:textColor="#9A9AA0"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

@@ -46,8 +46,8 @@ public class OfficeWidget extends AppWidgetProvider {
         views.setTextViewText(R.id.widget_inprogress, String.valueOf(inProgress));
         views.setTextViewText(R.id.widget_need, String.valueOf(needCheck));
         views.setTextViewText(R.id.widget_deadline, String.valueOf(deadline));
-        views.setTextViewText(R.id.widget_todo, "해야 할 일 " + todo + "건");
-        views.setTextViewText(R.id.widget_msg, "안 읽은 쪽지 " + unread + "건");
+        views.setTextViewText(R.id.widget_todo, String.valueOf(todo));
+        views.setTextViewText(R.id.widget_msg, String.valueOf(unread));
 
         // 위젯 탭하면 앱 열기
         Intent intent = context.getPackageManager()
