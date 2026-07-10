@@ -1,0 +1,14 @@
+{
+  "appId": "com.chamgwenchana.officemobile",
+  "appName": "참괜찮은 사무실",
+  "webDir": "dist",
+  "server": {
+    "url": "https://office-widget.vercel.app",
+    "cleartext": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}
