@@ -35,13 +35,20 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x android/gradlew
 
-      - name: Build debug APK
+      - name: Decode keystore
+        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/office.keystore
+
+      - name: Build release APK
         working-directory: android
-        run: ./gradlew assembleDebug --stacktrace
+        env:
+          KEYSTORE_PATH: ${{ github.workspace }}/android/app/office.keystore
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+        run: ./gradlew assembleRelease --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: office-mobile-debug-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          name: office-mobile-release-apk
+          path: android/app/build/outputs/apk/release/app-release.apk
           if-no-files-found: error
