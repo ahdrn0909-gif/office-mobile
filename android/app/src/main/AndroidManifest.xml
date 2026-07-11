@@ -44,6 +44,17 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/office_widget_info" />
         </receiver>
+
+        <receiver
+            android:name=".OfficeCalendarWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/office_calendar_info" />
+        </receiver>
     </application>
 
     <!-- Permissions -->
