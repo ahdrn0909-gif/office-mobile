@@ -123,10 +123,24 @@ public class OfficeCalendarWidget extends AppWidgetProvider {
                         int barId = resId(context, "bar_" + i + "_" + b);
                         String t = ev.optString("t", "");
                         String c = ev.optString("c", "#888888");
-                        int bg;
-                        try { bg = Color.parseColor(c); } catch (Exception e) { bg = 0xFF888888; }
-                        views.setTextViewText(barId, t);
-                        views.setInt(barId, "setBackgroundColor", bg);
+                        boolean allDay = ev.optInt("a", 0) == 1;
+                        int col;
+                        try { col = Color.parseColor(c); } catch (Exception e) { col = 0xFF888888; }
+                        if (allDay) {
+                            // 종일 일정: 색으로 채운 막대 + 흰 글자
+                            views.setTextViewText(barId, t);
+                            views.setTextColor(barId, 0xFFFFFFFF);
+                            views.setInt(barId, "setBackgroundColor", col);
+                        } else {
+                            // 시간 일정: 배경 투명 + 앞에 색깔 점(●) + 제목
+                            android.text.SpannableStringBuilder sb =
+                                    new android.text.SpannableStringBuilder("\u25CF " + t);
+                            sb.setSpan(new android.text.style.ForegroundColorSpan(col),
+                                    0, 1, android.text.Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                            views.setTextViewText(barId, sb);
+                            views.setTextColor(barId, 0xFFE8E8EA);
+                            views.setInt(barId, "setBackgroundColor", 0x00000000);
+                        }
                         views.setViewVisibility(barId, android.view.View.VISIBLE);
                         shown++;
                     }
