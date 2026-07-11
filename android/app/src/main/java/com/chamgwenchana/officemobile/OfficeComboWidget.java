@@ -178,7 +178,7 @@ public class OfficeComboWidget extends AppWidgetProvider {
             open.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
             int flags = PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE;
             PendingIntent pi = PendingIntent.getActivity(context, 300, open, flags);
-            views.setOnClickPendingIntent(R.id.cc_root, pi);
+            views.setOnClickPendingIntent(R.id.cc_grid, pi);
         }
 
         mgr.updateAppWidget(appWidgetId, views);

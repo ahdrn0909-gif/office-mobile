@@ -7,7 +7,864 @@
     android:background="@drawable/widget_bg"
     android:padding="10dp">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:orientation="horizontal" android:weightSum="5">
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/cc_prev_y" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="&#171;" android:textColor="#C8C8CE" android:textSize="24sp" android:textStyle="bold"
+            android:paddingLeft="12dp" android:paddingRight="12dp" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_marginRight="12dp" />
+        <TextView android:id="@+id/cc_prev_m" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="&#8249;" android:textColor="#C8C8CE" android:textSize="24sp" android:textStyle="bold"
+            android:paddingLeft="12dp" android:paddingRight="12dp" android:paddingTop="8dp" android:paddingBottom="8dp" />
+        <TextView android:id="@+id/cc_title" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:gravity="center" android:text="0000년 0월"
+            android:textColor="#F2F2F5" android:textSize="15sp" android:textStyle="bold" />
+        <TextView android:id="@+id/cc_next_m" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="&#8250;" android:textColor="#C8C8CE" android:textSize="24sp" android:textStyle="bold"
+            android:paddingLeft="12dp" android:paddingRight="12dp" android:paddingTop="8dp" android:paddingBottom="8dp" />
+        <TextView android:id="@+id/cc_next_y" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="&#187;" android:textColor="#C8C8CE" android:textSize="26sp" android:textStyle="bold"
+            android:paddingLeft="12dp" android:paddingRight="12dp" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_marginLeft="12dp" />
+        <TextView android:id="@+id/cc_today" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="오늘" android:textColor="#8AB4F8" android:textSize="14sp"
+            android:paddingLeft="10dp" android:paddingRight="6dp" android:paddingTop="8dp" android:paddingBottom="8dp" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/cc_grid" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="vertical" android:layout_marginTop="6dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="7">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:gravity="center" android:text="일" android:textColor="#FF6B6B" android:textSize="10sp" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:gravity="center" android:text="월" android:textColor="#B8B8BE" android:textSize="10sp" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:gravity="center" android:text="화" android:textColor="#B8B8BE" android:textSize="10sp" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:gravity="center" android:text="수" android:textColor="#B8B8BE" android:textSize="10sp" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:gravity="center" android:text="목" android:textColor="#B8B8BE" android:textSize="10sp" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:gravity="center" android:text="금" android:textColor="#B8B8BE" android:textSize="10sp" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:gravity="center" android:text="토" android:textColor="#7AA7FF" android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:orientation="horizontal" android:weightSum="7">
+            <LinearLayout android:id="@+id/cc_cell_0" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_0_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_0_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_0_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_1" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_1_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_1_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_1_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_2" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_2_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_2_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_2_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_3" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_3" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_3_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_3_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_3_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_3" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_4" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_4" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_4_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_4_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_4_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_4" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_5" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_5" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_5_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_5_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_5_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_5" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_6" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_6" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_6_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_6_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_6_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_6" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:orientation="horizontal" android:weightSum="7">
+            <LinearLayout android:id="@+id/cc_cell_7" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_7" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_7_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_7_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_7_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_7" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_8" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_8" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_8_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_8_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_8_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_8" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_9" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_9" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_9_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_9_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_9_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_9" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_10" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_10" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_10_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_10_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_10_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_10" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_11" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_11" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_11_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_11_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_11_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_11" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_12" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_12" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_12_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_12_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_12_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_12" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_13" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_13" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_13_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_13_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_13_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_13" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:orientation="horizontal" android:weightSum="7">
+            <LinearLayout android:id="@+id/cc_cell_14" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_14" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_14_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_14_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_14_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_14" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_15" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_15" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_15_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_15_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_15_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_15" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_16" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_16" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_16_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_16_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_16_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_16" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_17" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_17" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_17_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_17_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_17_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_17" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_18" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_18" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_18_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_18_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_18_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_18" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_19" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_19" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_19_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_19_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_19_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_19" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_20" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_20" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_20_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_20_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_20_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_20" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:orientation="horizontal" android:weightSum="7">
+            <LinearLayout android:id="@+id/cc_cell_21" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_21" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_21_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_21_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_21_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_21" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_22" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_22" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_22_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_22_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_22_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_22" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_23" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_23" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_23_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_23_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_23_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_23" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_24" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_24" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_24_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_24_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_24_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_24" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_25" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_25" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_25_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_25_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_25_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_25" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_26" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_26" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_26_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_26_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_26_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_26" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_27" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_27" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_27_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_27_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_27_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_27" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:orientation="horizontal" android:weightSum="7">
+            <LinearLayout android:id="@+id/cc_cell_28" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_28" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_28_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_28_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_28_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_28" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_29" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_29" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_29_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_29_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_29_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_29" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_30" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_30" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_30_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_30_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_30_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_30" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_31" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_31" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_31_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_31_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_31_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_31" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_32" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_32" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_32_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_32_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_32_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_32" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_33" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_33" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_33_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_33_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_33_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_33" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_34" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_34" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_34_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_34_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_34_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_34" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:orientation="horizontal" android:weightSum="7">
+            <LinearLayout android:id="@+id/cc_cell_35" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_35" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_35_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_35_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_35_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_35" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_36" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_36" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_36_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_36_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_36_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_36" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_37" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_37" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_37_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_37_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_37_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_37" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_38" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_38" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_38_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_38_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_38_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_38" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_39" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_39" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_39_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_39_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_39_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_39" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_40" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_40" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_40_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_40_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_40_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_40" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/cc_cell_41" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
+                <TextView android:id="@+id/cc_day_41" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
+                <TextView android:id="@+id/cc_bar_41_0" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_41_1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_bar_41_2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                    android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
+                    android:ellipsize="end" android:visibility="gone" />
+                <TextView android:id="@+id/cc_more_41" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:weightSum="5" android:layout_marginTop="8dp">
         <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
             android:orientation="vertical" android:gravity="center" android:layout_marginEnd="4dp"
             android:background="@drawable/widget_chip" android:padding="4dp">
@@ -47,860 +904,6 @@
                 android:text="0" android:textColor="#E8E8EA" android:textSize="15sp" android:textStyle="bold" />
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="쪽지" android:textColor="#9A9AA0" android:textSize="9sp" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="8dp">
-        <TextView android:id="@+id/cc_prev_y" android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="&#171;" android:textColor="#C8C8CE" android:textSize="22sp" android:textStyle="bold"
-            android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_marginRight="10dp" />
-        <TextView android:id="@+id/cc_prev_m" android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="&#8249;" android:textColor="#C8C8CE" android:textSize="22sp" android:textStyle="bold"
-            android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="6dp" android:paddingBottom="6dp" />
-        <TextView android:id="@+id/cc_title" android:layout_width="0dp" android:layout_height="wrap_content"
-            android:layout_weight="1" android:gravity="center" android:text="0000년 0월"
-            android:textColor="#F2F2F5" android:textSize="15sp" android:textStyle="bold" />
-        <TextView android:id="@+id/cc_next_m" android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="&#8250;" android:textColor="#C8C8CE" android:textSize="22sp" android:textStyle="bold"
-            android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="6dp" android:paddingBottom="6dp" />
-        <TextView android:id="@+id/cc_next_y" android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="&#187;" android:textColor="#C8C8CE" android:textSize="22sp" android:textStyle="bold"
-            android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_marginLeft="10dp" />
-        <TextView android:id="@+id/cc_today" android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="오늘" android:textColor="#8AB4F8" android:textSize="14sp"
-            android:paddingLeft="10dp" android:paddingRight="6dp" android:paddingTop="6dp" android:paddingBottom="6dp" />
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:orientation="horizontal" android:layout_marginTop="6dp" android:weightSum="7">
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-            android:gravity="center" android:text="일" android:textColor="#FF6B6B" android:textSize="10sp" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-            android:gravity="center" android:text="월" android:textColor="#B8B8BE" android:textSize="10sp" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-            android:gravity="center" android:text="화" android:textColor="#B8B8BE" android:textSize="10sp" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-            android:gravity="center" android:text="수" android:textColor="#B8B8BE" android:textSize="10sp" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-            android:gravity="center" android:text="목" android:textColor="#B8B8BE" android:textSize="10sp" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-            android:gravity="center" android:text="금" android:textColor="#B8B8BE" android:textSize="10sp" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-            android:gravity="center" android:text="토" android:textColor="#7AA7FF" android:textSize="10sp" />
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
-        android:orientation="horizontal" android:weightSum="7">
-        <LinearLayout android:id="@+id/cc_cell_0" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_0_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_0_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_0_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_1" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_1_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_1_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_1_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_2" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_2_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_2_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_2_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_3" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_3" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_3_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_3_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_3_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_3" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_4" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_4" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_4_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_4_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_4_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_4" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_5" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_5" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_5_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_5_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_5_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_5" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_6" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_6" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_6_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_6_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_6_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_6" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
-        android:orientation="horizontal" android:weightSum="7">
-        <LinearLayout android:id="@+id/cc_cell_7" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_7" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_7_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_7_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_7_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_7" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_8" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_8" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_8_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_8_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_8_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_8" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_9" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_9" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_9_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_9_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_9_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_9" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_10" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_10" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_10_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_10_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_10_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_10" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_11" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_11" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_11_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_11_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_11_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_11" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_12" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_12" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_12_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_12_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_12_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_12" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_13" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_13" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_13_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_13_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_13_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_13" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
-        android:orientation="horizontal" android:weightSum="7">
-        <LinearLayout android:id="@+id/cc_cell_14" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_14" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_14_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_14_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_14_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_14" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_15" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_15" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_15_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_15_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_15_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_15" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_16" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_16" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_16_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_16_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_16_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_16" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_17" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_17" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_17_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_17_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_17_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_17" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_18" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_18" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_18_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_18_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_18_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_18" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_19" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_19" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_19_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_19_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_19_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_19" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_20" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_20" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_20_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_20_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_20_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_20" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
-        android:orientation="horizontal" android:weightSum="7">
-        <LinearLayout android:id="@+id/cc_cell_21" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_21" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_21_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_21_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_21_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_21" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_22" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_22" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_22_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_22_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_22_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_22" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_23" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_23" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_23_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_23_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_23_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_23" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_24" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_24" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_24_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_24_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_24_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_24" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_25" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_25" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_25_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_25_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_25_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_25" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_26" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_26" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_26_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_26_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_26_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_26" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_27" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_27" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_27_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_27_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_27_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_27" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
-        android:orientation="horizontal" android:weightSum="7">
-        <LinearLayout android:id="@+id/cc_cell_28" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_28" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_28_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_28_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_28_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_28" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_29" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_29" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_29_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_29_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_29_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_29" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_30" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_30" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_30_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_30_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_30_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_30" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_31" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_31" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_31_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_31_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_31_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_31" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_32" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_32" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_32_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_32_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_32_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_32" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_33" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_33" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_33_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_33_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_33_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_33" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_34" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_34" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_34_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_34_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_34_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_34" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
-        android:orientation="horizontal" android:weightSum="7">
-        <LinearLayout android:id="@+id/cc_cell_35" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_35" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_35_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_35_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_35_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_35" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_36" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_36" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_36_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_36_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_36_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_36" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_37" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_37" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_37_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_37_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_37_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_37" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_38" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_38" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_38_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_38_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_38_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_38" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_39" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_39" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_39_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_39_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_39_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_39" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_40" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_40" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_40_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_40_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_40_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_40" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
-        </LinearLayout>
-        <LinearLayout android:id="@+id/cc_cell_41" android:layout_width="0dp" android:layout_height="match_parent"
-            android:layout_weight="1" android:orientation="vertical" android:padding="1dp">
-            <TextView android:id="@+id/cc_day_41" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
-            <TextView android:id="@+id/cc_bar_41_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_41_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_bar_41_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
-                android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
-                android:ellipsize="end" android:visibility="gone" />
-            <TextView android:id="@+id/cc_more_41" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:gravity="center_horizontal" android:text="" android:textColor="#9A9AA0" android:textSize="8sp" android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
