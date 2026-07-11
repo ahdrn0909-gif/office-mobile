@@ -5,6 +5,9 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -44,11 +47,33 @@ jobs:
           KEYSTORE_PATH: ${{ github.workspace }}/android/app/office.keystore
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          ORG_GRADLE_PROJECT_appVersionCode: ${{ github.run_number }}
+          ORG_GRADLE_PROJECT_appVersionName: 1.0.${{ github.run_number }}
         run: ./gradlew assembleRelease --stacktrace
 
-      - name: Upload APK
+      - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: office-mobile-release-apk
           path: android/app/build/outputs/apk/release/app-release.apk
           if-no-files-found: error
+
+      - name: Make version.json
+        run: |
+          cat > version.json <<EOF
+          {
+            "versionCode": ${{ github.run_number }},
+            "versionName": "1.0.${{ github.run_number }}",
+            "apkUrl": "https://github.com/${{ github.repository }}/releases/latest/download/app-release.apk"
+          }
+          EOF
+          cat version.json
+
+      - name: Publish to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          name: v1.0.${{ github.run_number }}
+          files: |
+            android/app/build/outputs/apk/release/app-release.apk
+            version.json
