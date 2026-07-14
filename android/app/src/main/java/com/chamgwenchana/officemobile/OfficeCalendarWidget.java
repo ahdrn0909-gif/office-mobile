@@ -110,6 +110,12 @@ public class OfficeCalendarWidget extends AppWidgetProvider {
             else color = 0xFFE8E8EA;
             views.setTextColor(dayId, color);
 
+            // 이전 달/렌더의 잔재 제거 — 이 칸의 막대·더보기를 먼저 모두 숨김
+            for (int b = 0; b < 3; b++) {
+                views.setViewVisibility(resId(context, "bar_" + i + "_" + b), android.view.View.GONE);
+            }
+            views.setViewVisibility(resId(context, "more_" + i), android.view.View.GONE);
+
             // 해당 날짜 이벤트 색막대
             String dateKey = String.format(Locale.US, "%04d-%02d-%02d", cy, cm + 1, cd);
             int shown = 0, total = 0;
