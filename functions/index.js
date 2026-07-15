@@ -70,7 +70,7 @@ exports.onNewMessage = onDocumentCreated(
   }
 );
 
-// 새 공유일정 → 대상자에게 푸시
+// 새 공유일정 → 대상자에게 푸시  (2026-07-15 실전 확인 완료)
 exports.onNewSchedule = onDocumentCreated(
   { document: "office_schedules/{schId}", region: "asia-northeast3" },
   async (event) => {
@@ -78,13 +78,19 @@ exports.onNewSchedule = onDocumentCreated(
     if (!snap) return;
     const s = snap.data() || {};
 
-    // 공유 대상 필드 후보 (구조 확인 후 조정 가능)
-    let targets = [];
-    if (Array.isArray(s.sharedWith)) targets = s.sharedWith;
-    else if (Array.isArray(s.toIds)) targets = s.toIds;
-    if (s.source !== "shared" && !targets.length) return; // 공유 아닌 개인일정 스킵
+    // [푸시 폭탄 방지] 네이버 일정 가져오기(source:"naver")는 한 번에 수십~수백 건이
+    // 일괄 생성되므로 건건이 푸시하면 안 된다. 직접 만든 일정(source:"manual")만 알린다.
+    if (s.source === "naver") return;
 
-    targets = targets.filter((id) => id && id !== s.ownerId);
+    // 공유 대상은 sharedWith 필드.
+    // App.jsx 의 resolveSharedWith() 가 shared/office(전체)/team 모두 이 배열에 채워 넣고,
+    // 개인일정(private)이면 빈 배열이 된다. (toIds 는 옛 데이터 호환용)
+    let targets = Array.isArray(s.sharedWith) ? s.sharedWith
+      : Array.isArray(s.toIds) ? s.toIds
+      : [];
+    if (!targets.length) return; // 개인일정 스킵
+
+    targets = targets.filter((id) => id && id !== s.ownerId); // 만든 본인 제외
     if (!targets.length) return;
 
     const tokens = await tokensForStaff(targets);
