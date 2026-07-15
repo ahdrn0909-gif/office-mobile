@@ -51,15 +51,15 @@
             <TextView android:id="@+id/day_0" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_0_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_0_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_0_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_0" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -70,15 +70,15 @@
             <TextView android:id="@+id/day_1" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_1_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_1_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_1_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_1" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -89,15 +89,15 @@
             <TextView android:id="@+id/day_2" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_2_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_2_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_2_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_2" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -108,15 +108,15 @@
             <TextView android:id="@+id/day_3" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_3_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_3_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_3_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_3" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -127,15 +127,15 @@
             <TextView android:id="@+id/day_4" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_4_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_4_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_4_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_4" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -146,15 +146,15 @@
             <TextView android:id="@+id/day_5" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_5_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_5_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_5_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_5" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -165,15 +165,15 @@
             <TextView android:id="@+id/day_6" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_6_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_6_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_6_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_6" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -187,15 +187,15 @@
             <TextView android:id="@+id/day_7" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_7_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_7_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_7_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_7" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -206,15 +206,15 @@
             <TextView android:id="@+id/day_8" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_8_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_8_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_8_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_8" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -225,15 +225,15 @@
             <TextView android:id="@+id/day_9" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_9_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_9_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_9_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_9" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -244,15 +244,15 @@
             <TextView android:id="@+id/day_10" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_10_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_10_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_10_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_10" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -263,15 +263,15 @@
             <TextView android:id="@+id/day_11" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_11_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_11_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_11_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_11" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -282,15 +282,15 @@
             <TextView android:id="@+id/day_12" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_12_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_12_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_12_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_12" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -301,15 +301,15 @@
             <TextView android:id="@+id/day_13" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_13_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_13_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_13_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_13" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -323,15 +323,15 @@
             <TextView android:id="@+id/day_14" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_14_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_14_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_14_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_14" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -342,15 +342,15 @@
             <TextView android:id="@+id/day_15" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_15_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_15_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_15_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_15" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -361,15 +361,15 @@
             <TextView android:id="@+id/day_16" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_16_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_16_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_16_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_16" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -380,15 +380,15 @@
             <TextView android:id="@+id/day_17" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_17_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_17_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_17_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_17" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -399,15 +399,15 @@
             <TextView android:id="@+id/day_18" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_18_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_18_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_18_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_18" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -418,15 +418,15 @@
             <TextView android:id="@+id/day_19" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_19_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_19_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_19_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_19" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -437,15 +437,15 @@
             <TextView android:id="@+id/day_20" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_20_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_20_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_20_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_20" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -459,15 +459,15 @@
             <TextView android:id="@+id/day_21" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_21_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_21_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_21_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_21" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -478,15 +478,15 @@
             <TextView android:id="@+id/day_22" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_22_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_22_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_22_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_22" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -497,15 +497,15 @@
             <TextView android:id="@+id/day_23" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_23_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_23_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_23_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_23" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -516,15 +516,15 @@
             <TextView android:id="@+id/day_24" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_24_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_24_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_24_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_24" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -535,15 +535,15 @@
             <TextView android:id="@+id/day_25" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_25_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_25_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_25_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_25" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -554,15 +554,15 @@
             <TextView android:id="@+id/day_26" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_26_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_26_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_26_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_26" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -573,15 +573,15 @@
             <TextView android:id="@+id/day_27" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_27_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_27_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_27_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_27" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -595,15 +595,15 @@
             <TextView android:id="@+id/day_28" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_28_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_28_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_28_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_28" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -614,15 +614,15 @@
             <TextView android:id="@+id/day_29" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_29_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_29_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_29_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_29" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -633,15 +633,15 @@
             <TextView android:id="@+id/day_30" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_30_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_30_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_30_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_30" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -652,15 +652,15 @@
             <TextView android:id="@+id/day_31" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_31_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_31_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_31_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_31" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -671,15 +671,15 @@
             <TextView android:id="@+id/day_32" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_32_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_32_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_32_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_32" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -690,15 +690,15 @@
             <TextView android:id="@+id/day_33" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_33_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_33_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_33_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_33" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -709,15 +709,15 @@
             <TextView android:id="@+id/day_34" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_34_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_34_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_34_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_34" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -731,15 +731,15 @@
             <TextView android:id="@+id/day_35" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_35_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_35_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_35_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_35" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -750,15 +750,15 @@
             <TextView android:id="@+id/day_36" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_36_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_36_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_36_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_36" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -769,15 +769,15 @@
             <TextView android:id="@+id/day_37" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_37_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_37_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_37_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_37" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -788,15 +788,15 @@
             <TextView android:id="@+id/day_38" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_38_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_38_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_38_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_38" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -807,15 +807,15 @@
             <TextView android:id="@+id/day_39" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_39_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_39_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_39_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_39" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -826,15 +826,15 @@
             <TextView android:id="@+id/day_40" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_40_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_40_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_40_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_40" android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -845,15 +845,15 @@
             <TextView android:id="@+id/day_41" android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:gravity="center_horizontal" android:text="" android:textColor="#E8E8EA" android:textSize="11sp" />
             <TextView android:id="@+id/bar_41_0" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_41_1" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/bar_41_2" android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="1dp" android:paddingLeft="2dp" android:paddingRight="1dp"
+                android:layout_marginTop="1dp" android:paddingLeft="1dp" android:paddingRight="0dp"
                 android:text="" android:textColor="#FFFFFF" android:textSize="8sp" android:maxLines="1"
                 android:ellipsize="end" android:visibility="gone" />
             <TextView android:id="@+id/more_41" android:layout_width="match_parent" android:layout_height="wrap_content"

@@ -151,8 +151,9 @@ public class OfficeComboWidget extends AppWidgetProvider {
                             views.setTextColor(barId, 0xFFFFFFFF);
                             views.setInt(barId, "setBackgroundColor", col);
                         } else {
+                            // 시간 일정: 배경 투명 + 앞에 얇은 색막대(▏) + 제목 (네이버 스타일)
                             android.text.SpannableStringBuilder sb =
-                                    new android.text.SpannableStringBuilder("\u25CF " + t);
+                                    new android.text.SpannableStringBuilder("\u258F" + t);
                             sb.setSpan(new android.text.style.ForegroundColorSpan(col),
                                     0, 1, android.text.Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
                             views.setTextViewText(barId, sb);
