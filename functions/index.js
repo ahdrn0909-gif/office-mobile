@@ -1,4 +1,4 @@
-const { onDocumentCreated } = require("firebase-functions/v2/firestore");
+const { onDocumentCreated, onDocumentUpdated } = require("firebase-functions/v2/firestore");
 const { initializeApp } = require("firebase-admin/app");
 const { getFirestore } = require("firebase-admin/firestore");
 const { getMessaging } = require("firebase-admin/messaging");
@@ -100,5 +100,43 @@ exports.onNewSchedule = onDocumentCreated(
     const body = (s.title || s.text || "일정이 공유되었습니다").toString().slice(0, 60);
 
     await sendToTokens(tokens, title, body, { type: "schedule", schId: event.params.schId });
+  }
+);
+
+// 쪽지 댓글/대댓글 → 쪽지 관련자 전원(보낸이 + 받은이)에게 푸시. 댓글 단 본인은 제외.
+// 댓글은 office_messages 문서의 comments 배열에 쌓이므로 '생성'이 아니라 '수정' 이벤트로 잡는다.
+exports.onNewComment = onDocumentUpdated(
+  { document: "office_messages/{msgId}", region: "asia-northeast3" },
+  async (event) => {
+    const before = (event.data.before && event.data.before.data()) || {};
+    const after = (event.data.after && event.data.after.data()) || {};
+
+    const b = Array.isArray(before.comments) ? before.comments : [];
+    const a = Array.isArray(after.comments) ? after.comments : [];
+    // 댓글이 늘어난 경우만. (읽음/처리완료/휴지통 같은 다른 수정에는 반응하지 않음)
+    if (a.length <= b.length) return;
+
+    const last = a[a.length - 1];
+    if (!last || !last.byId) return;
+
+    // 쪽지 관련자 = 보낸이 + 받은이 전원
+    const parties = [after.fromId].concat(Array.isArray(after.toIds) ? after.toIds : []);
+    const targets = [...new Set(parties)].filter((id) => id && id !== last.byId);
+    if (!targets.length) return;
+
+    const tokens = await tokensForStaff(targets);
+    if (!tokens.length) return;
+
+    const isReply = !!last.parentId;
+    const title = isReply ? "새 답글" : "새 댓글";
+    const who = last.byName || "";
+    const text = (last.text || "").toString().slice(0, 60);
+    const body = (who ? who + ": " : "") + text;
+
+    await sendToTokens(tokens, title, body, {
+      type: "comment",
+      msgId: event.params.msgId,
+      commentId: String(last.id || ""),
+    });
   }
 );
