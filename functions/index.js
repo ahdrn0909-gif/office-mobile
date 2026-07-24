@@ -150,7 +150,9 @@ exports.onNewComment = onDocumentUpdated(
  * 폴더 위치는 office_config/main 의 driveFolders 설정을 따른다.
  *   { rootName: "법무사업무공유폴더",
  *     fallback: "8. 기타업무",
- *     map: { "부동산등기": { folder: "1. 부동산등기업무", useYear: true }, ... } }
+ *     map: { "부동산등기": { folder: "1. 부동산등기업무" },
+ *            "부동산등기::매매": { folder: "1. 부동산등기업무/2026" }, ... } }
+ *   폴더는 소분류 → 대분류 → fallback 순으로 찾는다.
  *
  * 인증은 OAuth 위임(한용구 계정). 개인 지메일 드라이브는 서비스계정으로
  * 폴더를 만들 수 없기 때문(저장공간 미지급).
@@ -211,12 +213,6 @@ async function createFolder(token, name, parentId) {
   return j.id;
 }
 
-// 있으면 그대로 쓰고 없으면 만든다 (연도 폴더용)
-async function findOrCreate(token, name, parentId) {
-  const found = await findFolder(token, name, parentId);
-  return found || createFolder(token, name, parentId);
-}
-
 // 'A/B/C' 경로를 따라 내려간다. 도중에 없으면 null (조용히 새로 만들지 않음 —
 // 오타 하나로 엉뚱한 폴더가 생기면 나중에 찾기가 더 어려워지기 때문)
 async function walkPath(token, path, rootId) {
@@ -273,7 +269,10 @@ exports.onCaseCreated = onDocumentCreated(
       const cfg = (cfgSnap.exists && cfgSnap.get("driveFolders")) || {};
       const rootName = (cfg.rootName || "법무사업무공유폴더").trim();
       const fallback = (cfg.fallback || "").trim();
-      const rule = (cfg.map || {})[c.majorCategory] || {};
+      // 소분류 → 대분류 → fallback 순
+      const cmap = cfg.map || {};
+      const minorKey = c.minorCategory ? `${c.majorCategory}::${c.minorCategory}` : null;
+      const rule = (minorKey && cmap[minorKey]) || cmap[c.majorCategory] || {};
 
       const token = await getAccessToken();
 
@@ -286,12 +285,6 @@ exports.onCaseCreated = onDocumentCreated(
       if (wanted) baseId = await walkPath(token, wanted, rootId);
       if (!baseId && fallback) baseId = await walkPath(token, fallback, rootId);
       if (!baseId) return fail(`폴더 경로를 찾지 못했습니다: ${wanted || "(미지정)"} / 대체: ${fallback || "(없음)"}`);
-
-      // 연도 폴더 (없으면 생성)
-      if (rule.useYear) {
-        const year = dotDate(c.acceptDate).slice(0, 4) || String(new Date().getFullYear());
-        baseId = await findOrCreate(token, year, baseId);
-      }
 
       // 담당자 이름
       let staffName = "";
