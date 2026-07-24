@@ -150,9 +150,9 @@ exports.onNewComment = onDocumentUpdated(
  * 폴더 위치는 office_config/main 의 driveFolders 설정을 따른다.
  *   { rootName: "법무사업무공유폴더",
  *     fallback: "8. 기타업무",
- *     map: { "부동산등기": { folder: "1. 부동산등기업무" },
- *            "부동산등기::매매": { folder: "1. 부동산등기업무/2026" }, ... } }
- *   폴더는 소분류 → 대분류 → fallback 순으로 찾는다.
+ *     map: { "부동산등기": { folder: "1. 부동산등기업무" },      // 기준 폴더 바로 아래
+ *            "부동산등기::매매": { folder: "매매" }, ... } }        // 대분류 폴더 안
+ *   최종 경로 = 기준 / 대분류폴더 / 소분류폴더 / 사건폴더
  *
  * 인증은 OAuth 위임(한용구 계정). 개인 지메일 드라이브는 서비스계정으로
  * 폴더를 만들 수 없기 때문(저장공간 미지급).
@@ -225,6 +225,16 @@ async function walkPath(token, path, rootId) {
   return cur;
 }
 
+// 경로를 따라 내려가되, 없는 폴더는 만든다 (소분류 폴더용)
+async function walkOrCreate(token, path, rootId) {
+  let cur = rootId;
+  for (const seg of String(path).split("/").map((x) => x.trim()).filter(Boolean)) {
+    const found = await findFolder(token, seg, cur);
+    cur = found || (await createFolder(token, seg, cur));
+  }
+  return cur;
+}
+
 // 폴더 이름에 쓸 수 없는 문자 정리
 const clean = (s) =>
   String(s || "").replace(/[\\/:*?"<>|]/g, " ").replace(/\s+/g, " ").trim();
@@ -269,22 +279,25 @@ exports.onCaseCreated = onDocumentCreated(
       const cfg = (cfgSnap.exists && cfgSnap.get("driveFolders")) || {};
       const rootName = (cfg.rootName || "법무사업무공유폴더").trim();
       const fallback = (cfg.fallback || "").trim();
-      // 소분류 → 대분류 → fallback 순
+      // 설정은 단계별로 저장된다: 대분류 칸 = 기준 폴더 바로 아래, 소분류 칸 = 그 대분류 폴더 안
       const cmap = cfg.map || {};
       const minorKey = c.minorCategory ? `${c.majorCategory}::${c.minorCategory}` : null;
-      const rule = (minorKey && cmap[minorKey]) || cmap[c.majorCategory] || {};
+      const majorFolder = ((cmap[c.majorCategory] || {}).folder || "").trim();
+      const minorFolder = ((minorKey && (cmap[minorKey] || {}).folder) || "").trim();
 
       const token = await getAccessToken();
 
       const rootId = await findFolder(token, rootName, "root");
       if (!rootId) return fail(`기준 폴더 '${rootName}' 를 내 드라이브에서 찾지 못했습니다.`);
 
-      // 사건구분에 지정된 경로 → 없으면 fallback
+      // 대분류 폴더는 드라이브에 미리 있어야 한다 (오타로 엉뚱한 폴더가 생기는 것 방지)
       let baseId = null;
-      const wanted = (rule.folder || "").trim();
-      if (wanted) baseId = await walkPath(token, wanted, rootId);
+      if (majorFolder) baseId = await walkPath(token, majorFolder, rootId);
       if (!baseId && fallback) baseId = await walkPath(token, fallback, rootId);
-      if (!baseId) return fail(`폴더 경로를 찾지 못했습니다: ${wanted || "(미지정)"} / 대체: ${fallback || "(없음)"}`);
+      if (!baseId) return fail(`대분류 폴더를 찾지 못했습니다: ${majorFolder || "(미지정)"} / 대체: ${fallback || "(없음)"}`);
+
+      // 소분류 폴더는 없으면 만든다
+      if (minorFolder) baseId = await walkOrCreate(token, minorFolder, baseId);
 
       // 담당자 이름
       let staffName = "";
