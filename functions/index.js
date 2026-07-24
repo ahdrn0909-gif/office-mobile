@@ -1,6 +1,6 @@
 const { onDocumentCreated, onDocumentUpdated } = require("firebase-functions/v2/firestore");
 const { initializeApp } = require("firebase-admin/app");
-const { getFirestore } = require("firebase-admin/firestore");
+const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { getMessaging } = require("firebase-admin/messaging");
 
 initializeApp();
@@ -138,5 +138,185 @@ exports.onNewComment = onDocumentUpdated(
       msgId: event.params.msgId,
       commentId: String(last.id || ""),
     });
+  }
+);
+
+/* ============================================================
+ * 구글드라이브 사건 폴더 자동생성
+ *
+ * 새 사건(office_cases)이 만들어지면 구글드라이브에 폴더를 만들고
+ * 사건 문서에 driveFolderId / driveFolderUrl 을 저장한다.
+ *
+ * 폴더 위치는 office_config/main 의 driveFolders 설정을 따른다.
+ *   { rootName: "법무사업무공유폴더",
+ *     fallback: "8. 기타업무",
+ *     map: { "부동산등기": { folder: "1. 부동산등기업무", useYear: true }, ... } }
+ *
+ * 인증은 OAuth 위임(한용구 계정). 개인 지메일 드라이브는 서비스계정으로
+ * 폴더를 만들 수 없기 때문(저장공간 미지급).
+ * ============================================================ */
+
+const { defineSecret } = require("firebase-functions/params");
+const GDRIVE_CLIENT_ID = defineSecret("GDRIVE_CLIENT_ID");
+const GDRIVE_CLIENT_SECRET = defineSecret("GDRIVE_CLIENT_SECRET");
+const GDRIVE_REFRESH_TOKEN = defineSecret("GDRIVE_REFRESH_TOKEN");
+
+const FOLDER_MIME = "application/vnd.google-apps.folder";
+
+// refresh token 으로 access token 발급 (1시간짜리, 매 호출마다 새로 받음)
+async function getAccessToken() {
+  const res = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      client_id: GDRIVE_CLIENT_ID.value(),
+      client_secret: GDRIVE_CLIENT_SECRET.value(),
+      refresh_token: GDRIVE_REFRESH_TOKEN.value(),
+      grant_type: "refresh_token",
+    }).toString(),
+  });
+  const j = await res.json();
+  if (!j.access_token) throw new Error("access token 발급 실패: " + JSON.stringify(j));
+  return j.access_token;
+}
+
+// Drive 검색어 안의 작은따옴표 이스케이프 (폴더 이름에 ' 가 있어도 깨지지 않게)
+const esc = (s) => String(s).replace(/\\/g, "\\\\").replace(/'/g, "\\'");
+
+// 부모 폴더 안에서 이름이 일치하는 하위 폴더 찾기. 없으면 null
+async function findFolder(token, name, parentId) {
+  const q = [
+    `name = '${esc(name)}'`,
+    `mimeType = '${FOLDER_MIME}'`,
+    `'${esc(parentId)}' in parents`,
+    "trashed = false",
+  ].join(" and ");
+  const url =
+    "https://www.googleapis.com/drive/v3/files?" +
+    new URLSearchParams({ q, fields: "files(id,name)", pageSize: "10" }).toString();
+  const res = await fetch(url, { headers: { Authorization: "Bearer " + token } });
+  const j = await res.json();
+  if (j.error) throw new Error("검색 실패: " + JSON.stringify(j.error));
+  return (j.files && j.files[0]) ? j.files[0].id : null;
+}
+
+async function createFolder(token, name, parentId) {
+  const res = await fetch("https://www.googleapis.com/drive/v3/files?fields=id", {
+    method: "POST",
+    headers: { Authorization: "Bearer " + token, "Content-Type": "application/json" },
+    body: JSON.stringify({ name, mimeType: FOLDER_MIME, parents: [parentId] }),
+  });
+  const j = await res.json();
+  if (!j.id) throw new Error("폴더 생성 실패: " + JSON.stringify(j));
+  return j.id;
+}
+
+// 있으면 그대로 쓰고 없으면 만든다 (연도 폴더용)
+async function findOrCreate(token, name, parentId) {
+  const found = await findFolder(token, name, parentId);
+  return found || createFolder(token, name, parentId);
+}
+
+// 'A/B/C' 경로를 따라 내려간다. 도중에 없으면 null (조용히 새로 만들지 않음 —
+// 오타 하나로 엉뚱한 폴더가 생기면 나중에 찾기가 더 어려워지기 때문)
+async function walkPath(token, path, rootId) {
+  let cur = rootId;
+  for (const seg of String(path).split("/").map((x) => x.trim()).filter(Boolean)) {
+    const next = await findFolder(token, seg, cur);
+    if (!next) return null;
+    cur = next;
+  }
+  return cur;
+}
+
+// 폴더 이름에 쓸 수 없는 문자 정리
+const clean = (s) =>
+  String(s || "").replace(/[\\/:*?"<>|]/g, " ").replace(/\s+/g, " ").trim();
+
+// 2026-03-21 -> 2026.03.21 (기존 폴더 표기와 동일)
+const dotDate = (s) => {
+  const m = String(s || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
+  return m ? `${m[1]}.${m[2]}.${m[3]}` : String(s || "").slice(0, 10);
+};
+
+// 폴더 이름: 수임일_담당자_사건명_위임인
+function buildFolderName(c, staffName) {
+  const parts = [
+    dotDate(c.acceptDate),
+    clean(staffName),
+    clean(c.caseName),
+    clean(c.clientName),
+  ].filter(Boolean);
+  return parts.join("_").slice(0, 180); // 드라이브 이름 길이 여유 있게 제한
+}
+
+exports.onCaseCreated = onDocumentCreated(
+  {
+    document: "office_cases/{caseId}",
+    region: "asia-northeast3",
+    secrets: [GDRIVE_CLIENT_ID, GDRIVE_CLIENT_SECRET, GDRIVE_REFRESH_TOKEN],
+  },
+  async (event) => {
+    const snap = event.data;
+    if (!snap) return;
+    const c = snap.data() || {};
+    if (c.driveFolderId) return; // 이미 있음
+
+    const caseId = event.params.caseId;
+    const fail = async (reason) => {
+      console.error("[drive] " + caseId + " " + reason);
+      try { await snap.ref.update({ driveFolderError: reason }); } catch (e) {}
+    };
+
+    try {
+      const cfgSnap = await db.collection("office_config").doc("main").get();
+      const cfg = (cfgSnap.exists && cfgSnap.get("driveFolders")) || {};
+      const rootName = (cfg.rootName || "법무사업무공유폴더").trim();
+      const fallback = (cfg.fallback || "").trim();
+      const rule = (cfg.map || {})[c.majorCategory] || {};
+
+      const token = await getAccessToken();
+
+      const rootId = await findFolder(token, rootName, "root");
+      if (!rootId) return fail(`기준 폴더 '${rootName}' 를 내 드라이브에서 찾지 못했습니다.`);
+
+      // 사건구분에 지정된 경로 → 없으면 fallback
+      let baseId = null;
+      const wanted = (rule.folder || "").trim();
+      if (wanted) baseId = await walkPath(token, wanted, rootId);
+      if (!baseId && fallback) baseId = await walkPath(token, fallback, rootId);
+      if (!baseId) return fail(`폴더 경로를 찾지 못했습니다: ${wanted || "(미지정)"} / 대체: ${fallback || "(없음)"}`);
+
+      // 연도 폴더 (없으면 생성)
+      if (rule.useYear) {
+        const year = dotDate(c.acceptDate).slice(0, 4) || String(new Date().getFullYear());
+        baseId = await findOrCreate(token, year, baseId);
+      }
+
+      // 담당자 이름
+      let staffName = "";
+      if (c.staffId) {
+        try {
+          const st = await db.collection("office_staff").doc(c.staffId).get();
+          if (st.exists) staffName = st.get("name") || "";
+        } catch (e) {}
+      }
+
+      const name = buildFolderName(c, staffName);
+      if (!name) return fail("폴더 이름을 만들 수 없습니다 (사건 정보 부족).");
+
+      // 같은 이름이 이미 있으면 그걸 쓴다 (중복 생성 방지)
+      const folderId = (await findFolder(token, name, baseId)) || (await createFolder(token, name, baseId));
+
+      await snap.ref.update({
+        driveFolderId: folderId,
+        driveFolderUrl: "https://drive.google.com/drive/folders/" + folderId,
+        driveFolderName: name,
+        driveFolderError: FieldValue.delete(),
+      });
+      console.log("[drive] 폴더 생성 완료:", name);
+    } catch (e) {
+      await fail(String((e && e.message) || e).slice(0, 300));
+    }
   }
 );
